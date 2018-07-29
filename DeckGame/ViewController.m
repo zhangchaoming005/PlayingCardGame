@@ -13,7 +13,6 @@
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
-@property (nonatomic) NSUInteger flipsCount;
 @property (strong, nonatomic) CardMatchingGame *game;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 
@@ -39,12 +38,6 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
--(void)setFlipsCount:(NSUInteger)flipsCount {
-    _flipsCount = flipsCount;
-    self.flipsLabel.text = [NSString stringWithFormat:@"flips : %lu", (unsigned long)_flipsCount];
-    [self.flipsLabel sizeToFit];
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -68,6 +61,9 @@
         
         cardButton.enabled = !card.matched;
     }
+    
+    self.flipsLabel.text = [NSString stringWithFormat:@"Score : %d", self.game.score];
+    [self.flipsLabel sizeToFit];
 }
 
 -(NSString *) titleForCard:(Card *)card {
