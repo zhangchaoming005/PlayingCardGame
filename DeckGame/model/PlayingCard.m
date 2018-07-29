@@ -56,4 +56,15 @@ static NSArray * suitTypes;
     return [allRank[self.rank] stringByAppendingString:self.suit];
 }
 
+-(int)match:(PlayingCard *)anotherCard {
+    int score = 0;
+    if (self.rank == anotherCard.rank) {
+        score  = 4;
+    } else if(self.suit == anotherCard.suit) {
+        score = 1;
+    }
+    
+    return score;
+}
+
 @end

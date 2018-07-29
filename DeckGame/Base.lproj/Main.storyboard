@@ -196,6 +196,21 @@
                     </view>
                     <connections>
                         <outlet property="flipsLabel" destination="GtE-KE-dc7" id="NTu-0o-vZi"/>
+                        <outletCollection property="cardButtons" destination="NF1-no-i19" id="CLP-pf-sNw"/>
+                        <outletCollection property="cardButtons" destination="Pav-fy-FPR" id="oJ9-Se-6zi"/>
+                        <outletCollection property="cardButtons" destination="rNt-ha-hs8" id="ePr-RE-FGs"/>
+                        <outletCollection property="cardButtons" destination="eQx-JU-eWx" id="IYd-4H-SxE"/>
+                        <outletCollection property="cardButtons" destination="T8I-Uz-uuS" id="r7X-Ec-cvK"/>
+                        <outletCollection property="cardButtons" destination="IlN-1A-fMY" id="7WY-yG-p96"/>
+                        <outletCollection property="cardButtons" destination="u7M-PI-k1M" id="7yJ-Mc-JBv"/>
+                        <outletCollection property="cardButtons" destination="G5E-sv-yBN" id="yls-Y0-rZ3"/>
+                        <outletCollection property="cardButtons" destination="dKd-R6-8EG" id="6lb-oi-V6v"/>
+                        <outletCollection property="cardButtons" destination="0xZ-H6-hE5" id="ja9-dy-UGD"/>
+                        <outletCollection property="cardButtons" destination="wdA-MV-NA3" id="nY5-7j-Cpt"/>
+                        <outletCollection property="cardButtons" destination="YDC-3I-57n" id="Uai-Jt-aD6"/>
+                        <outletCollection property="cardButtons" destination="JEh-so-ATI" id="3wO-VT-AMW"/>
+                        <outletCollection property="cardButtons" destination="FRm-aT-5q0" id="7dx-YP-cPn"/>
+                        <outletCollection property="cardButtons" destination="kC3-6O-6VS" id="3Yx-xR-WFy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

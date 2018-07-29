@@ -44,26 +44,26 @@
 
 -(void)chooseCarAtIndex:(NSUInteger)index {
     Card * card = [self cardAtIndex:index];
-    
-    if (!card.isMatched) {
-        if (card.isChosen) {
-            card.chosen = NO;
-        } else {
-            for (Card * otherCard in _cards) {
-                if (card != otherCard && otherCard.isChosen) {
-                    NSUInteger matchedScore = [card match:otherCard];
-                    if (matchedScore) {
-                        card.matched = YES;
-                        otherCard.matched = YES;
-                        self.score += matchedScore;
-                        break;
-                    } else {
-                        otherCard.chosen = NO;
-                    }
+    if (card.isChosen) {
+        card.chosen = NO;
+    } else {
+        for (Card * otherCard in _cards) {
+            if (otherCard.isMatched) {
+                continue;
+            }
+            
+            if (card != otherCard && otherCard.isChosen) {
+                NSUInteger matchedScore = [card match:otherCard];
+                if (matchedScore) {
+                    card.matched = YES;
+                    otherCard.matched = YES;
+                    self.score += matchedScore;
+                    break;
+                } else {
+                    otherCard.chosen = NO;
                 }
             }
         }
-        
         card.chosen = YES;
     }
 }
