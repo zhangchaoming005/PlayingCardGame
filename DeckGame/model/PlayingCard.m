@@ -17,7 +17,7 @@ static NSArray * suitTypes;
 @implementation PlayingCard
 
 +(NSArray *)validSuits {
-    return @[@"♠", @"♥", @"♦", @"♣"];
+    return @[@"♠️", @"♥️", @"♦️", @"♣️"];
 }
 
 +(NSArray *)rankStrings {
