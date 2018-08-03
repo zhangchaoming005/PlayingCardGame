@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Deck.h"
 
 @interface ViewController : UIViewController
+
+
+//abstract method need to implement for subclass
+-(Deck *)createDeck;
 
 
 @end
